@@ -3,7 +3,7 @@ if (not status) then
   return
 end
 
-M.setup({ commit_italics = true })
+M.setup({ comment_italics = true })
 
 local colorbuddy = require("colorbuddy.init")
 local Color = colorbuddy.Color
