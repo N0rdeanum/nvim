@@ -1,4 +1,4 @@
-require "base"
+require "config"
 require "highlights"
 require "maps"
 require "plugins"
