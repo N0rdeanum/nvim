@@ -8,13 +8,13 @@ lspkind.init({
   mode = 'symbol',
 
   -- default symbol map
-  -- can be either 'default' (requires nerd-fonts font) or
-  -- 'codicons' for codicon preset (requires vscode-codicons font)
+  -- может быть либо «по умолчанию» (требуется шрифт nerd-fonts), либо 12
+  -- 'codicons' для пресета codicon (требуется шрифт vscode-codicons)
   --
   -- default: 'default'
   preset = 'codicons',
 
-  -- override preset symbols
+  -- преопределить предустановленные символы
   --
   -- default: {}
   symbol_map = {

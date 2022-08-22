@@ -2,6 +2,7 @@ local status, M = pcall(require, "neosolarized")
 if (not status) then
   return
 end
+--neosolarized
 
 M.setup({ comment_italics = true })
 

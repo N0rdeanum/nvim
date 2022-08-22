@@ -8,13 +8,16 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use "wbthomason/packer.nvim"
+
+  -- Темы
+  use "lunarvim/synthwave84.nvim"
   use {
     "svrana/neosolarized.nvim",
     requires = { "tjdevries/colorbuddy.nvim" }
   }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'kyazdani42/nvim-web-devicons' -- Значки файлов
   use "L3MON4D3/LuaSnip" -- snippet
-  use "hoob3rt/lualine.nvim" -- Statusline
+  use "hoob3rt/lualine.nvim" -- Строка состояния
   use "onsails/lspkind-nvim" -- vscode-like pictograms
   use "hrsh7th/cmp-buffer" -- nvim-cmp source for buffer words
   use "hrsh7th/cmp-nvim-lsp" -- nvim-cmp source for neovim's built-in LSP
@@ -31,4 +34,6 @@ packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Comon utilites
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
+
+  use "akinsho/nvim-bufferline.lua"
 end)

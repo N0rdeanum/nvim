@@ -23,24 +23,24 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.ai = true -- auto indent
-vim.opt.si = true -- Smart indent
-vim.opt.wrap = false -- No wrap lines
+vim.opt.ai = true -- Автоматический отступ
+vim.opt.si = true -- умный отступ
+vim.opt.wrap = false -- нет линий переноса
 vim.opt.backspace = "start,eol,indent"
-vim.opt.path:append { "**" } -- Finding files - Search down into subfolders
+vim.opt.path:append { "**" } -- Поиск файлов - поиск в подпапках
 vim.opt.wildignore:append { "*/node_modules/*" }
 
 
 --Undercurl
-vim.cmd ([[let &t_Cs = "\e[4:3m"]])
-vim.cmd ([[let &t_Ce = "\e[4:0m"]])
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
 --but this doesn't work on iterm2.
 
---Turn off paste mode when leaving insert
+--Отключить режим вставки при выходе из вставки
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = "*",
   command = "set nopaste"
 })
 
---Add asterisks in block comments
+--добавить звездочки в комментариях к блоку
 vim.opt.formatoptions:append { "r" }
