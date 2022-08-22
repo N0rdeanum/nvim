@@ -57,3 +57,18 @@ nvim_lsp.sumneko_lua.setup {
     },
   },
 }
+
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off",
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false
+      }
+    },
+  },
+}
