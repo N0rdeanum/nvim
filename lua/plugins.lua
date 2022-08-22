@@ -22,6 +22,9 @@ packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- LSP
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ':TSUpdate'
+    run = ":TSUpdate"
   }
+
+  use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
 end)
