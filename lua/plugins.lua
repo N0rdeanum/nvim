@@ -14,7 +14,8 @@ packer.startup(function(use)
     "svrana/neosolarized.nvim",
     requires = { "tjdevries/colorbuddy.nvim" }
   }
-  use 'kyazdani42/nvim-web-devicons' -- Значки файлов
+  use "kyazdani42/nvim-web-devicons" -- Значки файлов
+  use "glepnir/lspsaga.nvim" -- UIs
   use "L3MON4D3/LuaSnip" -- snippet
   use "hoob3rt/lualine.nvim" -- Строка состояния
   use "onsails/lspkind-nvim" -- vscode-like pictograms
@@ -26,6 +27,8 @@ packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
   }
+  use "jose-elias-alvarez/null-ls.nvim" --Используеться Neovim в качестве языкового сервера для внедрения диагностики LSP, кодовых действий и многого другого через Lua
+  use "MunifTanjim/prettier.nvim" -- Плагин Prettier для встроенного LSP клиента Neovim
 
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
@@ -35,4 +38,8 @@ packer.startup(function(use)
   use "nvim-telescope/telescope-file-browser.nvim"
 
   use "akinsho/nvim-bufferline.lua"
+  use "norcalli/nvim-colorizer.lua"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 end)
