@@ -14,7 +14,6 @@ M.setup {
   },
   ensure_installed = {
     "cpp",
-    "html",
     "typescript",
     "markdown",
     "make",
