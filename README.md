@@ -12,5 +12,10 @@
 - [ Node ] (https://nodejs.org/en/download/)
 - [ Python 3.8 > ] (https://www.python.org/)
 
+1. Install  language server [pyright]
+   ```bash
+   npm i -g pyright
+   ```
+
 
 
