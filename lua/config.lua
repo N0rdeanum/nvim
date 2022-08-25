@@ -1,33 +1,36 @@
 vim.cmd("autocmd!")
 
-vim.scriptencoding = 'utf-8'
+vim.scriptencoding = 'utf-8' -- кодирование сценариев
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
-vim.wo.number = true
+vim.wo.number = true -- включение строковых номеров
 
 vim.opt.title = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
+vim.opt.autoindent = true -- автоматический отступ
+vim.opt.smartindent = true -- умный отступ
 vim.opt.hlsearch = true
-vim.opt.backup = false
+vim.opt.backup = false -- резервное копирование 
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
-vim.opt.expandtab = true
-vim.opt.scrolloff = 10
-vim.opt.shell = 'fish'
+vim.opt.laststatus = 2 -- последний статус 
+vim.opt.expandtab = true -- развернуть вкладку
+vim.opt.scrolloff = 10 -- прокрутка
+vim.opt.shell = 'fish' -- shell оболочка
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
-vim.opt.smarttab = true
+vim.opt.smarttab = true -- умная вкладка
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2 -- ширина сдвига
+vim.opt.tabstop = 2 -- Табуляция
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+
+-- что бы команды работали с латиницей
+vim.opt.langmap= "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
