@@ -2,12 +2,16 @@ local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
 
+--Remap space as leader key
+keymap.set("", "<Space>", "<Nop>")
+vim.g.mapleader = " "
+
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
 
 -- Delete a word backwards
-keymap.set('n', 'dw', 'vb"_d')
+keymap.set('n', '<leader>dw', 'vb"_d')
 
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
@@ -32,3 +36,12 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+
+-- Insert --
+-- Press jk fast to enter
+keymap.set("i", "jk", "<ESC>")
+
+
+-- Git
+keymap.set("n", "<leader>gg", "<cmd>lua_LAZYGIT_TOGGLE()<CR>")
