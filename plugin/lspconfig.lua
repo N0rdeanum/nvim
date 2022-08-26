@@ -140,6 +140,7 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
+
 nvim_lsp.tailwindcss.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -167,3 +168,13 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
 })
+
+local servers = { "pyright"}
+for m, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+  on_attach = on_attach,
+  flag = {
+    debounce_text_changes = 150,
+  }
+}
+end
