@@ -29,5 +29,5 @@
 
 1. Install  language server [pyright]
    ```bash
-   npm i -g pyright
+   sudo npm i -g pyright
    ```
