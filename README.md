@@ -2,14 +2,16 @@
 
 Требуется [ Neovim ](https://neovim.io/) (>= 0.7)
 
+- [ Node ] (https://nodejs.org/en/download/)
+
 ##  Настройка оболочки (macOS и Linux)
 
 1.
-  ```bash
+  ```sh
   npm install --save-dev tree-sitter-cli
   ```
 2.
-  ```shell
+  ```sh
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
   ```
@@ -24,10 +26,32 @@
 ## Настройки для Python
 
 
-- [ Node ] (https://nodejs.org/en/download/)
 - [ Python 3.8 > ] (https://www.python.org/)
 
 1. Install  language server [pyright]
-   ```bash
-   sudo npm i -g pyright
-   ```
+   ```sh
+  npm i -g pyright
+  ```
+## Настройка для React
+
+1. для ts, react, js
+  ```sh
+  npm install -g typescript-language-server typescript
+  ```
+
+### если npm выдает ошибки ставим через sudo
+
+## Запуск Neovim по команде vim
+
+1. проверяем путь где стоит Neovim
+```sh
+  which nvim
+``` 
+ путь -->> /opt/homebrew/bin/nvim
+
+2. замена
+```sh
+  ln -s (which nvim) /opt/homebrew/bin/vim
+```
+
+# Кеймап
