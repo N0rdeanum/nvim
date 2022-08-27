@@ -24,17 +24,15 @@
 - [ Шрифты Nerd ] (https://github.com/ryanoasis/nerd-fonts) - Шрифты, пропатченные Powerline.
 
 ## Настройки для Python
-
-
 - [ Python 3.8 > ] (https://www.python.org/)
-
-1. Install  language server [pyright]
+Install  language server [pyright]
    ```sh
   npm i -g pyright
   ```
+
 ## Настройка для React
 
-1. для ts, react, js
+для ts, react, js
   ```sh
   npm install -g typescript-language-server typescript
   ```
