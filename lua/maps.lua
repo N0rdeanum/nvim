@@ -1,10 +1,16 @@
 local keymap = vim.keymap
 
+
 keymap.set('n', 'x', '"_x')
 
 --Remap space as leader key
 keymap.set("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
+---- Close all windows and exit from Neovim with <leader> and q
+keymap.set('n', '<leader>z', ':qa!<CR>')
+
+-- Clear search highlighting with <leader> and c
+keymap.set('n', '<leader>c', ':nohl<CR>')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
@@ -19,9 +25,15 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+--save
+keymap.set('n', '<leader>w', ':w<cr>')
+
 -- New tab
-keymap.set('n', 'te', ':tabedit')
+keymap.set('n', 'te', ':tabedit<cr>')
+-- Close tab
+keymap.set('n', '<A-q>', ':tabclose<cr>')
 -- Split window
+keymap.set('n', '<leader>e', ':close<cr>')
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- Move window
@@ -42,6 +54,3 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- Press jk fast to enter
 keymap.set("i", "jk", "<ESC>")
 
-
--- Git
-keymap.set("n", "<leader>gg", "<cmd>lua_LAZYGIT_TOGGLE()<CR>")

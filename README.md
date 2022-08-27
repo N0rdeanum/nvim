@@ -55,9 +55,22 @@ Install  language server [pyright]
   ```
 
 # Кеймап
+Leader = Space,  A = alt, C = Ctrl
 
 ## Терминал
-- Alt+g открыть/закрыть Lazygit
-- Alt+d открыть/закрыть Терминал
+- A-g = открыть/закрыть Lazygit
+- A-d = открыть/закрыть Терминал
+## Диагностика
+- С-j = diagnostic_jump_next
+- K   = hover_doc
+- gd  = sp_finder
+- C-k = signature_help
+- gp  = preview_definition
+- gr  = rename
 ## Файловый менеджер
+- ;r  = live_grep
+- ;t  = help_tags
+- \\  = buffers
+- sf  = file_browser
+
 

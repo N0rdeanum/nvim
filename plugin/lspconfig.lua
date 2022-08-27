@@ -58,10 +58,10 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
---nvim_lsp.flow.setup {
---  on_attach = on_attach,
---  capabilities = capabilities
---}
+nvim_lsp.flow.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -70,56 +70,10 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
---nvim_lsp.sourcekit.setup {
+-- nvim_lsp.sourcekit.setup {
 --  on_attach = on_attach,
---}
+-- }
 
-nvim_lsp.clangd.setup {
-  default_config = {
-    cmd = { 'clangd' },
-    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
-    root_dir = function(fname)
-      return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
-    end,
-    single_file_support = true,
-    capabilities = default_capabilities,
-  },
-  commands = {
-    ClangdSwitchSourceHeader = {
-      function()
-        switch_source_header(0)
-      end,
-      description = 'Switch between source/header',
-    },
-  },
-  docs = {
-    description = [[
-https://clangd.llvm.org/installation.html
-- **NOTE:** Clang >= 11 is recommended! See [#23](https://github.com/neovim/nvim-lsp/issues/23).
-- If `compile_commands.json` lives in a build directory, you should
-  symlink it to the root of your source tree.
-  ```
-  ln -s /path/to/myproject/build/compile_commands.json /path/to/myproject/
-  ```
-- clangd relies on a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
-  specified as compile_commands.json, see https://clangd.llvm.org/installation#compile_commandsjson
-]],
-    default_config = {
-      root_dir = [[
-        root_pattern(
-          '.clangd',
-          '.clang-tidy',
-          '.clang-format',
-          'compile_commands.json',
-          'compile_flags.txt',
-          'configure.ac',
-          '.git'
-        )
-      ]],
-      capabilities = [[default capabilities, with offsetEncoding utf-8]],
-    },
-  },
-}
 
 
 nvim_lsp.sumneko_lua.setup {
@@ -169,7 +123,7 @@ vim.diagnostic.config({
   },
 })
 
-local servers = { "pyright"}
+local servers = { "pyright", "clangd"}
 for m, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
   on_attach = on_attach,

@@ -1,5 +1,6 @@
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then
+  return
 end
 
 bufferline.setup {
@@ -34,5 +35,5 @@ bufferline.setup {
 }
 
 
-vim.api.nvim_set_keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", {})
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>]", "<cmd>BufferLineCycleNext<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>[", "<cmd>BufferLineCyclePrev<cr>", {})
