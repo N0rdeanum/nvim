@@ -22,11 +22,13 @@
   ```
 
 - [ Шрифты Nerd ] (https://github.com/ryanoasis/nerd-fonts) - Шрифты, пропатченные Powerline.
+## lsp config 
+- [ Lsp config ] (https://github.com/neovim/nvim-lspconfig)
 
 ## Настройки для Python
 - [ Python 3.8 > ] (https://www.python.org/)
 Install  language server [pyright]
-   ```sh
+  ```sh
   npm i -g pyright
   ```
 
@@ -41,15 +43,21 @@ Install  language server [pyright]
 
 ## Запуск Neovim по команде vim
 
-1. проверяем путь где стоит Neovim
-```sh
+проверяем путь где стоит Neovim
+  ```sh
   which nvim
-``` 
- путь -->> /opt/homebrew/bin/nvim
+  ``` 
+путь -->> /opt/homebrew/bin/nvim
 
-2. замена
-```sh
+замена
+  ```sh
   ln -s (which nvim) /opt/homebrew/bin/vim
-```
+  ```
 
 # Кеймап
+
+## Терминал
+- Alt+g открыть/закрыть Lazygit
+- Alt+d открыть/закрыть Терминал
+## Файловый менеджер
+

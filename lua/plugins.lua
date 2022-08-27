@@ -60,5 +60,8 @@ packer.startup(function(use)
   --отступы
   use "lukas-reineke/indent-blankline.nvim"
 
+  use "voldikss/vim-floaterm"
+
+
 end)
 
