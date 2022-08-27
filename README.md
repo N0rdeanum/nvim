@@ -38,8 +38,7 @@ Install  language server [pyright]
   ```sh
   npm install -g typescript-language-server typescript
   ```
-
-### если npm выдает ошибки ставим через sudo
+- если npm выдает ошибки ставим через sudo
 
 ## Запуск Neovim по команде vim
 
@@ -55,22 +54,38 @@ Install  language server [pyright]
   ```
 
 # Кеймап
-Leader = Space,  A = alt, C = Ctrl
+Leader = Space,  A = alt, C = Ctrl, (q) или (ESC) = закрыть/выйти с открытых окн приложений в нутри nvim 
 
-## Терминал
+### Терминал
 - A-g = открыть/закрыть Lazygit
 - A-d = открыть/закрыть Терминал
-## Диагностика
+### Диагностика
 - С-j = diagnostic_jump_next
 - K   = hover_doc
 - gd  = sp_finder
 - C-k = signature_help
 - gp  = preview_definition
 - gr  = rename
-## Файловый менеджер
+### Файловый менеджер
 - ;r  = live_grep
 - ;t  = help_tags
 - \\  = buffers
 - sf  = file_browser
-
-
+---------------------------------
+- gcc - comments
+- leader-z - закрыть nvim с вкладками без сохранения
+- leader-c - отмена всех выдилений после поиска
+- С-a - Increment (+)
+- C-x - decrement (-)
+- leader-w - сохранить
+### Влкдки/сплит окна
+- te - Новя вкладка
+- Aq - закрыть вкладку
+- Ae - закрыть сплит окно
+- ss - горизонтальное сплит окно
+- vs - вертикальное сплит окно
+- A] - next tab 
+- A[ - prev tab
+### git
+- leader-gb - open blame window 
+- leader-go - открыть файл/папку git репозитория

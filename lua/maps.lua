@@ -33,7 +33,7 @@ keymap.set('n', 'te', ':tabedit<cr>')
 -- Close tab
 keymap.set('n', '<A-q>', ':tabclose<cr>')
 -- Split window
-keymap.set('n', '<leader>e', ':close<cr>')
+keymap.set('n', '<A-e>', ':close<cr>')
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- Move window
