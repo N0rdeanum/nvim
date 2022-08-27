@@ -74,7 +74,19 @@ nvim_lsp.tsserver.setup {
 --  on_attach = on_attach,
 -- }
 
-
+--nvim_lsp.html.setup {
+--  on_attach = on_attach,
+--    settings = {
+--    filetypes = { 'html' },
+--    single_file_support = true,
+--    settings = {},
+--    init_options = {
+--      provideFormatter = true,
+--      embeddedLanguages = { css = true, javascript = true },
+--      configurationSection = { 'html', 'css', 'javascript' },
+--    },
+--  },
+--}
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
@@ -123,8 +135,8 @@ vim.diagnostic.config({
   },
 })
 
-local servers = { "pyright", "clangd"}
-for m, lsp in ipairs(servers) do
+local servers = { "pyright", "clangd", "html"}
+for M, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
   on_attach = on_attach,
   flag = {

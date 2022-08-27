@@ -7,6 +7,7 @@ prettier.setup {
   bin = "prettier",
   filetypes = {
     "css",
+    "html",
     "javascript",
     "javascriptreact",
     "typescript",
