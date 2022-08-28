@@ -9,11 +9,14 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use "wbthomason/packer.nvim" -- пакер установщик пакетов 
 
-  use "lunarvim/horizon.nvim"
-  --[[ use { ]]
-  --[[   "svrana/neosolarized.nvim", -- тема Неосоларийз ]]
-  --[[   requires = { "tjdevries/colorbuddy.nvim" } ]]
-  --[[ } ]]
+  use {
+      "lunarvim/horizon.nvim",
+      requires = { "tjdevries/colorbuddy.nvim" }
+    }
+ -- use {
+ --   "svrana/neosolarized.nvim", -- тема Неосоларийз
+ --   requires = { "tjdevries/colorbuddy.nvim" }
+ -- }
   use "nvim-lualine/lualine.nvim" -- Статус линия
   use "nvim-lua/plenary.nvim" -- Доп утилиты
   use "onsails/lspkind-nvim" -- Вскодовские пиктограммы
