@@ -70,23 +70,6 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
--- nvim_lsp.sourcekit.setup {
---  on_attach = on_attach,
--- }
-
---nvim_lsp.html.setup {
---  on_attach = on_attach,
---    settings = {
---    filetypes = { 'html' },
---    single_file_support = true,
---    settings = {},
---    init_options = {
---      provideFormatter = true,
---      embeddedLanguages = { css = true, javascript = true },
---      configurationSection = { 'html', 'css', 'javascript' },
---    },
---  },
---}
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
