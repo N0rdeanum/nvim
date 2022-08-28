@@ -1,7 +1,9 @@
 --vim.lsp.set_log_level("debug")
 
 local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+if (not status) then
+    return
+end
 
 local protocol = require('vim.lsp.protocol')
 
@@ -117,6 +119,44 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
 })
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+nvim_lsp.clangd.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"clangd",
+		"--background-index",
+	},
+	filetypes = {"c", "cpp", "objc", "objcpp"},
+}
+
+nvim_lsp.dockerls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"docker-langserver", "--stdio"
+	},
+	filetypes = { "dockerfile" },
+	root_dir = nvim_lsp.util.root_pattern("Dockerfile"),
+	single_file_support = true,
+}
+
+nvim_lsp.bashls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"bash-language-server", "start"
+	},
+	cmd_env = {
+		GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+	},
+	filetypes = { "sh" },
+	root_dir = nvim_lsp.util.find_git_ancestor,
+	single_file_support = true,
+}
+
 
 local servers = { "pyright", "clangd", "html"}
 for M, lsp in ipairs(servers) do
