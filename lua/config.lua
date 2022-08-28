@@ -22,8 +22,8 @@ vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true -- умная вкладка
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 2 -- ширина сдвига
-vim.opt.tabstop = 2 -- Табуляция
+vim.opt.shiftwidth = 4 -- ширина сдвига
+vim.opt.tabstop = 4 -- Табуляция
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
