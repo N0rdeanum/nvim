@@ -54,3 +54,6 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- Press jk fast to enter
 keymap.set("i", "jk", "<ESC>")
 
+-- Comment
+--keymap.set("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>")
+--keymap.set("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')

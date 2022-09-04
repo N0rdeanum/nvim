@@ -1,6 +1,6 @@
 local colorscheme = "horizon"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
+local status, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status then
   return
 end
