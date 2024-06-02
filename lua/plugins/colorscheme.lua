@@ -58,7 +58,6 @@ return {
   config = function()
     require("lvim-colorscheme").setup({
       style = "darks", -- или "darksoft", "light"
-      -- transparent_mode = true,
       styles = {
         comments = { italic = true, bold = true },
         keywords = { italic = true, bold = true },
@@ -67,12 +66,19 @@ return {
       },
       sidebars = {},
       colors = {
-        dark = {},
-        darksoft = {},
-        light = {},
+        dark = {
+          transparent_mode = true,
+          background = "NONE",
+        },
+        darksoft = {
+          background = "NONE",
+          transparent_mode = true,
+        },
+        light = {
+          background = "NONE",
+          transparent_mode = true,
+        },
       },
     })
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   end,
 }

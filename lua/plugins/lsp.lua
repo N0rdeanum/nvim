@@ -38,12 +38,14 @@ return {
         cssls = {},
         tailwindcss = {
           root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".js", ".ts", "tsconfig.json", "pacage.json", ".git")(...)
+            return require("lspconfig.util").root_pattern("javascript", "*.ts", "tsconfig.json", "pacage.json", ".git")(
+              ...
+            )
           end,
         },
         tsserver = {
           root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".js", ".ts", "tsconfig.json", "pacage.json", ".git")(...)
+            return require("lspconfig.util").root_pattern("*.js", "*.ts", "tsconfig.json", "pacage.json", ".git")(...)
           end,
           single_file_support = false,
           settings = {

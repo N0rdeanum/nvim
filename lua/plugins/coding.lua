@@ -94,4 +94,45 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+
+  -- {
+  --   "vhyrro/luarocks.nvim",
+  --   priority = 1000,
+  --   config = true,
+  --   opts = {
+  --     rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
+  --   },
+  -- },
+  -- {
+  --   "rest-nvim/rest.nvim",
+  --   ft = "http",
+  --   dependencies = { "luarocks.nvim" },
+  --   config = function()
+  --     require("rest-nvim").setup()
+  --   end,
+  -- },
+
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+    opts = {
+      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
+    },
+  },
+  {
+    "rest-nvim/rest.nvim",
+    ft = "http",
+    dependencies = { "luarocks.nvim" },
+    config = function()
+      require("rest-nvim").setup()
+
+      -- Rest-nvim keybindings
+      local opts = { noremap = true, silent = true }
+
+      vim.api.nvim_set_keymap("n", "<leader>rr", "<Cmd>lua require('rest-nvim').run()<CR>", opts)
+      vim.api.nvim_set_keymap("n", "<leader>rl", "<Cmd>lua require('rest-nvim').last()<CR>", opts)
+      vim.api.nvim_set_keymap("n", "<leader>rp", "<Cmd>lua require('rest-nvim').preview()<CR>", opts)
+    end,
+  },
 }
